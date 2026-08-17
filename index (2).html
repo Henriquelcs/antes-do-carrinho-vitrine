@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Análises de compra do Antes do Carrinho: evidências, riscos e links dos produtos mostrados nos vídeos.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Vitrine | Antes do Carrinho</title>
+  <style>
+    :root {
+      --bg: #07101d;
+      --surface: #0e1a2b;
+      --surface-2: #14243a;
+      --text: #f5f7fb;
+      --muted: #aebdd0;
+      --line: rgba(255, 255, 255, 0.10);
+      --green: #61d095;
+      --green-dark: #143d2c;
+      --yellow: #ffd166;
+      --yellow-dark: #473917;
+      --blue: #68b7ff;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.26);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(49, 120, 255, 0.18), transparent 34rem),
+        radial-gradient(circle at 90% 10%, rgba(97, 208, 149, 0.12), transparent 28rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 58px 0 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-weight: 850;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      color: #07101d;
+      background: var(--green);
+      box-shadow: 0 10px 25px rgba(97, 208, 149, 0.24);
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: clamp(2.25rem, 7vw, 4.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .search-panel {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 26px 0 34px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(14, 26, 43, 0.92);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .search-panel svg {
+      flex: 0 0 auto;
+      color: var(--green);
+    }
+
+    #busca {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      color: var(--text);
+      background: transparent;
+      font: inherit;
+      font-size: 1rem;
+    }
+
+    #busca::placeholder { color: #7f91a8; }
+
+    .section-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      letter-spacing: -0.04em;
+    }
+
+    #contador {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(20, 36, 58, 0.98), rgba(11, 24, 40, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .card-image {
+      position: relative;
+      min-height: 250px;
+      overflow: hidden;
+      background: #101d2f;
+    }
+
+    .card-image img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 280ms ease;
+    }
+
+    .card:hover .card-image img { transform: scale(1.025); }
+
+    .code {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      border-radius: 999px;
+      background: rgba(7, 16, 29, 0.84);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(10px);
+    }
+
+    .card-body { padding: 22px; }
+
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 750;
+    }
+
+    .badge.real {
+      color: #baf1d3;
+      background: var(--green-dark);
+    }
+
+    .badge.analise {
+      color: #ffe5a6;
+      background: var(--yellow-dark);
+    }
+
+    .category {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 18px 0;
+      padding: 15px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-label,
+    .date {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .price {
+      display: block;
+      margin-top: 2px;
+      color: var(--green);
+      font-size: 1.5rem;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+    }
+
+    .date { max-width: 150px; text-align: right; }
+
+    .decision {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 20px;
+    }
+
+    .decision div {
+      padding-left: 12px;
+      border-left: 3px solid var(--line);
+    }
+
+    .decision .verdict { border-color: var(--green); }
+    .decision .risk { border-color: var(--yellow); }
+
+    .decision dt {
+      margin-bottom: 2px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .decision dd { margin: 0; font-size: 0.93rem; }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button.primary {
+      border-color: var(--green);
+      color: #07101d;
+      background: var(--green);
+    }
+
+    .button.secondary { background: rgba(255, 255, 255, 0.04); }
+
+    .empty,
+    .loading {
+      grid-column: 1 / -1;
+      padding: 50px 20px;
+      border: 1px dashed var(--line);
+      border-radius: 20px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .disclosure {
+      margin: 34px 0 0;
+      padding: 18px;
+      border: 1px solid rgba(255, 209, 102, 0.3);
+      border-radius: 18px;
+      color: #e9dba9;
+      background: rgba(71, 57, 23, 0.34);
+      font-size: 0.88rem;
+    }
+
+    footer {
+      padding: 36px 0 52px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer a { color: var(--blue); }
+
+    @media (max-width: 760px) {
+      header { padding-top: 38px; }
+      .grid { grid-template-columns: 1fr; }
+      .card-image img { height: 230px; }
+      .actions { grid-template-columns: 1fr; }
+      .search-panel { top: 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">✓</span>
+      <span>Antes do Carrinho</span>
+    </div>
+    <h1>Decida melhor antes de gastar.</h1>
+    <p class="hero-copy">Encontre o produto mostrado no vídeo e veja, com transparência, o que sabemos, o que ainda precisa ser comprovado e onde conferir o preço.</p>
+  </header>
+
+  <main class="container">
+    <label class="search-panel" for="busca">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle>
+        <path d="m16.5 16.5 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      <input id="busca" type="search" autocomplete="off" placeholder="Digite o código do vídeo (ex.: ADC-002) ou o nome do produto">
+    </label>
+
+    <section aria-labelledby="produtos-titulo">
+      <div class="section-top">
+        <h2 id="produtos-titulo">Produtos analisados</h2>
+        <span id="contador" aria-live="polite"></span>
+      </div>
+      <div id="produtos" class="grid">
+        <p class="loading">Carregando produtos…</p>
+      </div>
+    </section>
+
+    <aside class="disclosure">
+      <strong>Transparência:</strong> alguns botões desta página são links de afiliado. Se você comprar por eles, o canal poderá receber uma comissão sem custo adicional para você. Preços, avaliações e disponibilidade podem mudar; confira sempre a página do produto antes da compra.
+    </aside>
+  </main>
+
+  <footer class="container">
+    <span>Antes do Carrinho — fidelidade ao bolso do consumidor.</span>
+    <span> · </span>
+    <a href="https://www.youtube.com/@AntesDiCarrinho" target="_blank" rel="noopener">Canal no YouTube</a>
+  </footer>
+
+  <script>
+    const grid = document.querySelector('#produtos');
+    const busca = document.querySelector('#busca');
+    const contador = document.querySelector('#contador');
+    let produtos = [];
+
+    const escapar = (valor = '') => String(valor)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+
+    const normalizar = (valor = '') => String(valor)
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+
+    function card(produto) {
+      const tipoClasse = produto.tipo === 'experiencia_real' ? 'real' : 'analise';
+      const tipoTexto = produto.tipo === 'experiencia_real' ? 'Experiência real' : 'Análise do anúncio';
+
+      return `
+        <article class="card">
+          <div class="card-image">
+            <img src="${escapar(produto.imagem)}" alt="${escapar(produto.nome)}" loading="lazy">
+            <span class="code">${escapar(produto.codigo)}</span>
+          </div>
+          <div class="card-body">
+            <div class="eyebrow">
+              <span class="badge ${tipoClasse}">${tipoTexto}</span>
+              <span class="category">${escapar(produto.categoria)}</span>
+            </div>
+            <h3>${escapar(produto.nome)}</h3>
+            <div class="price-row">
+              <div>
+                <span class="price-label">Preço observado</span>
+                <strong class="price">${escapar(produto.preco_observado)}</strong>
+              </div>
+              <span class="date">Em ${escapar(produto.data_observacao)}</span>
+            </div>
+            <dl class="decision">
+              <div class="verdict">
+                <dt>Leitura de compra</dt>
+                <dd>${escapar(produto.veredito)}</dd>
+              </div>
+              <div>
+                <dt>Evidência</dt>
+                <dd>${escapar(produto.evidencia)}</dd>
+              </div>
+              <div class="risk">
+                <dt>Atenção</dt>
+                <dd>${escapar(produto.risco)}</dd>
+              </div>
+            </dl>
+            <div class="actions">
+              <a class="button primary" href="${escapar(produto.link_afiliado)}" target="_blank" rel="sponsored nofollow noopener">Conferir oferta</a>
+              <a class="button secondary" href="${escapar(produto.link_video)}" target="_blank" rel="noopener">Assistir ao vídeo</a>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function renderizar(lista) {
+      contador.textContent = `${lista.length} ${lista.length === 1 ? 'produto' : 'produtos'}`;
+      grid.innerHTML = lista.length
+        ? lista.map(card).join('')
+        : '<p class="empty">Nenhum produto encontrado. Confira o código ou tente outro nome.</p>';
+    }
+
+    busca.addEventListener('input', () => {
+      const termo = normalizar(busca.value.trim());
+      const filtrados = produtos.filter((produto) =>
+        normalizar([
+          produto.codigo,
+          produto.nome,
+          produto.categoria,
+          produto.tipo,
+          ...(produto.termos_busca || [])
+        ].join(' ')).includes(termo)
+      );
+      renderizar(filtrados);
+    });
+
+    fetch('./produtos.json')
+      .then((resposta) => {
+        if (!resposta.ok) throw new Error('Não foi possível carregar os produtos.');
+        return resposta.json();
+      })
+      .then((dados) => {
+        produtos = dados.produtos || [];
+        renderizar(produtos);
+      })
+      .catch(() => {
+        contador.textContent = '';
+        grid.innerHTML = '<p class="empty">Não foi possível carregar a vitrine agora. Tente novamente em instantes.</p>';
+      });
+  </script>
+</body>
+</html>

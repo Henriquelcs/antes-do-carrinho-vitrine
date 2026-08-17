@@ -1,0 +1,35 @@
+{
+  "atualizado_em": "2026-08-17",
+  "produtos": [
+    {
+      "codigo": "ADC-001",
+      "nome": "Teclado mecânico Basike ABNT2",
+      "categoria": "Teclados",
+      "tipo": "experiencia_real",
+      "preco_observado": "R$ 385,72",
+      "data_observacao": "12/08/2026",
+      "veredito": "Boa opção para quem quer formato compacto e três conexões, mas o preço observado reduz o custo-benefício em relação ao valor pago.",
+      "evidencia": "Produto usado de verdade desde 4 de julho e comprado por R$ 267.",
+      "risco": "O manual é pouco explicativo e o preço pode mudar. Confira o valor atual antes de decidir.",
+      "link_afiliado": "https://meli.la/2QATDag",
+      "link_video": "https://youtube.com/shorts/b4_sv_Dy-Wg",
+      "imagem": "https://i.ytimg.com/vi/b4_sv_Dy-Wg/hqdefault.jpg",
+      "termos_busca": ["basike", "abnt2", "mecanico", "bluetooth", "rgb"]
+    },
+    {
+      "codigo": "ADC-002",
+      "nome": "Mouse Gamer Attack Shark X11 Tri Mode",
+      "categoria": "Mouses",
+      "tipo": "analise_de_compra",
+      "preco_observado": "R$ 136,24",
+      "data_observacao": "12/08/2026",
+      "veredito": "No papel, reúne muitos recursos pelo preço. É uma opção para considerar, não uma recomendação baseada em uso.",
+      "evidencia": "O anúncio exibia nota 4,9, mais de 10 mil vendidos, três conexões, sensor PAW3311 e base magnética com RGB.",
+      "risco": "Não houve teste físico. Autonomia, conforto, precisão, desempenho e qualidade de construção não foram confirmados.",
+      "link_afiliado": "https://meli.la/19tgmGB",
+      "link_video": "https://youtube.com/shorts/m5NdGmGmJO8",
+      "imagem": "https://i.ytimg.com/vi/m5NdGmGmJO8/hqdefault.jpg",
+      "termos_busca": ["attack shark", "x11", "mouse gamer", "paw3311", "dock", "tri mode"]
+    }
+  ]
+}
