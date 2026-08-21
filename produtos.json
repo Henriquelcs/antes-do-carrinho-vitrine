@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-17",
+  "atualizado_em": "2026-08-21",
   "produtos": [
     {
       "codigo": "ADC-001",
@@ -14,7 +14,13 @@
       "link_afiliado": "https://meli.la/2QATDag",
       "link_video": "https://youtube.com/shorts/b4_sv_Dy-Wg",
       "imagem": "https://i.ytimg.com/vi/b4_sv_Dy-Wg/hqdefault.jpg",
-      "termos_busca": ["basike", "abnt2", "mecanico", "bluetooth", "rgb"]
+      "termos_busca": [
+        "basike",
+        "abnt2",
+        "mecanico",
+        "bluetooth",
+        "rgb"
+      ]
     },
     {
       "codigo": "ADC-002",
@@ -29,7 +35,59 @@
       "link_afiliado": "https://meli.la/19tgmGB",
       "link_video": "https://youtube.com/shorts/m5NdGmGmJO8",
       "imagem": "https://i.ytimg.com/vi/m5NdGmGmJO8/hqdefault.jpg",
-      "termos_busca": ["attack shark", "x11", "mouse gamer", "paw3311", "dock", "tri mode"]
+      "termos_busca": [
+        "attack shark",
+        "x11",
+        "mouse gamer",
+        "paw3311",
+        "dock",
+        "tri mode"
+      ]
+    },
+    {
+      "codigo": "ADC-003",
+      "nome": "Auto Transformador 5000VA 110V/220V Bivolt",
+      "categoria": "Energia e transformadores",
+      "tipo": "analise_de_compra",
+      "preco_observado": "R$ 118,52",
+      "data_observacao": "20/08/2026",
+      "veredito": "Os sinais públicos de compra foram favoráveis, mas a escolha depende de confirmar se a potência e as tensões são adequadas ao aparelho que será ligado.",
+      "evidencia": "Na análise, o anúncio apresentava nota 4,8, 2.288 avaliações, 96,2% de notas 4 e 5, reputação verde do vendedor e pelo menos 1.000.000 de unidades vendidas informadas.",
+      "risco": "O produto não foi testado fisicamente. Confirme potência, tensão, compatibilidade, instalação e condições atuais do anúncio antes da compra.",
+      "link_afiliado": "https://meli.la/1CN7FPL",
+      "link_video": "https://www.youtube.com/shorts/ZgdNZC-8Ess",
+      "imagem": "https://i.ytimg.com/vi/ZgdNZC-8Ess/hqdefault.jpg",
+      "termos_busca": [
+        "autotransformador",
+        "transformador",
+        "5000va",
+        "110v",
+        "220v",
+        "bivolt"
+      ]
+    },
+    {
+      "codigo": "ADC-004",
+      "nome": "Air Fryer Philco 6,5 L Visor Glass e Redstone PAF65A",
+      "categoria": "Eletroportáteis",
+      "tipo": "analise_de_compra",
+      "preco_observado": "Consulte a oferta",
+      "data_observacao": "20/08/2026",
+      "veredito": "Os sinais públicos avaliados pela automação foram favoráveis, mas a decisão depende de confirmar preço, capacidade, tensão e condições atuais do anúncio.",
+      "evidencia": "O produto foi aprovado pelos filtros da automação e o anúncio informava pelo menos 500.000 unidades vendidas no momento da análise.",
+      "risco": "O produto não foi testado fisicamente. Confirme capacidade, potência, tensão, dimensões, garantia e avaliações recentes antes da compra.",
+      "link_afiliado": "https://meli.la/2kM2xTz",
+      "link_video": "https://www.youtube.com/shorts/dYHBgF75cLY",
+      "imagem": "https://i.ytimg.com/vi/dYHBgF75cLY/hqdefault.jpg",
+      "termos_busca": [
+        "air fryer",
+        "philco",
+        "paf65a",
+        "6,5 litros",
+        "visor glass",
+        "redstone",
+        "fritadeira"
+      ]
     }
   ]
 }
