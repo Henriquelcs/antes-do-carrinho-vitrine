@@ -88,6 +88,35 @@
         "redstone",
         "fritadeira"
       ]
+    },
+    {
+      "codigo": "ADC-005",
+      "nome": "Balcao Triplo Veneza 3 Portas e 1 Prateleira 1084cm Bartira Cor Branco com Damasco",
+      "categoria": "Casa",
+      "tipo": "analise_de_compra",
+      "preco_observado": "Consulte a oferta",
+      "data_observacao": "21/08/2026",
+      "veredito": "Os sinais públicos analisados foram favoráveis, mas a decisão depende de conferir as condições atuais do anúncio.",
+      "evidencia": "Na análise, o anúncio apresentava pelo menos 1.000 vendidos informados.",
+      "risco": "O produto não foi testado fisicamente. Confira preço, características, avaliações e condições atuais antes da compra.",
+      "link_afiliado": "https://meli.la/22s8BgF",
+      "link_video": "https://www.youtube.com/shorts/5dZiVxX0fOU",
+      "imagem": "https://i.ytimg.com/vi/5dZiVxX0fOU/hqdefault.jpg",
+      "termos_busca": [
+        "balcao",
+        "triplo",
+        "veneza",
+        "portas",
+        "prateleira",
+        "1084cm",
+        "bartira",
+        "cor",
+        "branco",
+        "com",
+        "damasco"
+      ],
+      "item_id": "MLB6422936254",
+      "produto_id": "MLB50473856"
     }
   ]
 }
