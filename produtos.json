@@ -176,6 +176,36 @@
       ],
       "item_id": "MLB6972453978",
       "produto_id": "MLB60074213"
+    },
+    {
+      "codigo": "ADC-008",
+      "nome": "Macbook Air de 13 Polegadas Chip M5 Cpu de 10nucleos Gpu de 8nucleos Neuralengine de 16nucleos 512gb Azul Ceu",
+      "categoria": "Informática",
+      "tipo": "analise_de_compra",
+      "preco_observado": "Consulte a oferta",
+      "data_observacao": "21/08/2026",
+      "veredito": "Os sinais públicos analisados foram favoráveis, mas a decisão depende de conferir as condições atuais do anúncio.",
+      "evidencia": "Na análise, o anúncio apresentava pelo menos 500 vendidos informados.",
+      "risco": "O produto não foi testado fisicamente. Confira preço, características, avaliações e condições atuais antes da compra.",
+      "link_afiliado": "https://meli.la/2DkZj76",
+      "link_video": "https://www.youtube.com/shorts/RpylJDGF8W8",
+      "imagem": "https://i.ytimg.com/vi/RpylJDGF8W8/hqdefault.jpg",
+      "termos_busca": [
+        "macbook",
+        "air",
+        "polegadas",
+        "chip",
+        "cpu",
+        "10nucleos",
+        "gpu",
+        "8nucleos",
+        "neuralengine",
+        "16nucleos",
+        "512gb",
+        "azul"
+      ],
+      "item_id": "MLB5046166679",
+      "produto_id": "MLB66159867"
     }
   ]
 }
